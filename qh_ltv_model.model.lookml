@@ -1,3 +1,4 @@
+# LTV Model
 - connection: qh_vertica
 
 - scoping: true                  # for backward compatibility
@@ -5,7 +6,6 @@
 - include: "*.dashboard.lookml"  # include all the dashboards
 
 - explore: ltv_base
-  hidden: true
 
 - explore: ltv_activity
   joins:
