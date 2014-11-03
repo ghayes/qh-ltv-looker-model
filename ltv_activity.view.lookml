@@ -6,7 +6,9 @@
     type: int
     sql: ${TABLE}.CONSUMER_ID
 
-  - dimension: visit_date
+  - dimension_group: visit
+    type: time
+    timeframes: [time, date, week, month]
     sql: ${TABLE}.VISIT_DATE
 
   - dimension: visit_number
@@ -16,6 +18,10 @@
   - dimension: days_since_registration
     type: int
     sql: ${TABLE}.DAYS_SINCE_REGISTRATION
+    
+  - dimension: days_since_last_session
+    type: int
+    sql: ${TABLE}.days_since_last_session
     
   - dimension: visit_value
     type: number

@@ -7,7 +7,7 @@
     type: int
     sql: ${TABLE}.CONSUMER_ID
 
-  - dimension: created_date
+  - dimension_group: created
     type: time
     timeframes: [time, date, week, month]
     sql: ${TABLE}.CREATED_DATE
